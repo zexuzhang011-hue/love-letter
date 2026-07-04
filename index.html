@@ -1,0 +1,1915 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>张泽旭 ♡ 韩如玉 — 我们的故事</title>
+<meta name="description" content="张泽旭和韩如玉的爱情纪念网页，从2023年11月12日开始的爱情故事。">
+<meta name="theme-color" content="#fce4ec">
+
+<!-- ====== Fonts ====== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Great+Vibes&family=Noto+Serif+SC:wght@400;600;700&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- ====== Font Awesome ====== -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- ====== AOS ====== -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<!-- ============================================================
+     配 置 区 — 修改这里的内容即可定制整个网页
+     ============================================================ -->
+<style>
+/* 此处仅留空壳变量，JS 动态注入 style */
+:root {
+  --color-primary: #f8a5c0;
+  --color-secondary: #fce4ec;
+  --color-accent: #e84393;
+  --color-text: #4a2040;
+  --color-text-light: #8a5a7a;
+  --color-bg-start: #fce4ec;
+  --color-bg-end: #f8e0f0;
+  --font-display: 'Playfair Display', serif;
+  --font-hand: 'Great Vibes', cursive;
+  --font-body: 'Noto Serif SC', serif;
+  --font-nunito: 'Nunito', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-bg-end));
+  color: var(--color-text);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* ====== Scrollbar ====== */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #fce4ec; }
+::-webkit-scrollbar-thumb { background: #f8a5c0; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #e84393; }
+
+/* ====== Loading Screen ====== */
+#loading {
+  position: fixed; inset: 0; z-index: 9999;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  background: linear-gradient(135deg, #fce4ec 0%, #f3d4e0 50%, #fce4ec 100%);
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+#loading.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+#loading .heart-loader {
+  font-size: 60px;
+  animation: pulse-heart 1s ease-in-out infinite;
+  color: #e84393;
+}
+.loader-text {
+  margin-top: 24px;
+  font-family: var(--font-display);
+  font-size: 18px;
+  color: #8a5a7a;
+  letter-spacing: 3px;
+  animation: fade-in-out 1.5s ease-in-out infinite;
+}
+@keyframes pulse-heart {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+@keyframes fade-in-out {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+/* ====== Sections ====== */
+.section {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  overflow: hidden;
+}
+
+/* ====== Section 1: Opening ====== */
+#section-opening {
+  background: linear-gradient(135deg, #fce4ec 0%, #f8d4e0 25%, #f3d4f0 50%, #f8d4e0 75%, #fce4ec 100%);
+  background-size: 400% 400%;
+  animation: gradient-flow 15s ease infinite;
+  position: relative;
+}
+@keyframes gradient-flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.opening-content {
+  text-align: center;
+  z-index: 10;
+  position: relative;
+}
+.opening-heart {
+  font-size: 80px;
+  color: #e84393;
+  display: block;
+  margin-bottom: 10px;
+  animation: float-heart 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 30px rgba(232, 67, 147, 0.4));
+}
+@keyframes float-heart {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-15px) scale(1.05); }
+}
+.opening-content h1 {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 6vw, 56px);
+  font-weight: 700;
+  color: #4a2040;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+.opening-content .ampersand {
+  font-family: var(--font-hand);
+  font-size: clamp(28px, 5vw, 48px);
+  color: #e84393;
+  display: inline-block;
+  margin: 0 8px;
+}
+.opening-content .meet-text {
+  font-family: var(--font-display);
+  font-size: clamp(16px, 3vw, 24px);
+  color: #6a3050;
+  font-style: italic;
+  margin: 20px 0 8px;
+  letter-spacing: 2px;
+}
+.opening-content .meet-text span {
+  display: block;
+  font-size: clamp(14px, 2.5vw, 20px);
+  margin-top: 4px;
+}
+.enter-btn {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 16px 40px;
+  border: 2px solid rgba(232, 67, 147, 0.4);
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  color: #4a2040;
+  font-family: var(--font-body);
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  letter-spacing: 3px;
+  position: relative;
+  overflow: hidden;
+}
+.enter-btn:hover {
+  background: rgba(232, 67, 147, 0.15);
+  border-color: #e84393;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 40px rgba(232, 67, 147, 0.2);
+}
+.enter-btn .arrow {
+  display: inline-block;
+  margin-left: 8px;
+  animation: arrow-bounce 2s ease-in-out infinite;
+}
+@keyframes arrow-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(5px); }
+}
+
+/* ====== Floating particles container ====== */
+#particles-canvas {
+  position: fixed; inset: 0; z-index: 5;
+  pointer-events: none;
+}
+#particles-canvas.interactive {
+  pointer-events: auto;
+}
+
+/* ====== Section 2: Love Timer ====== */
+#section-timer {
+  background: linear-gradient(135deg, #fce4ec 0%, #f0d4e8 50%, #fce4ec 100%);
+  background-size: 400% 400%;
+  animation: gradient-flow 12s ease infinite;
+}
+.timer-content {
+  text-align: center;
+  z-index: 10;
+  position: relative;
+}
+.timer-content .section-icon {
+  font-size: 48px;
+  color: #e84393;
+  margin-bottom: 12px;
+  filter: drop-shadow(0 0 20px rgba(232, 67, 147, 0.3));
+}
+.timer-content h2 {
+  font-family: var(--font-display);
+  font-size: clamp(20px, 4vw, 32px);
+  color: #6a3050;
+  margin-bottom: 30px;
+  font-weight: 400;
+  letter-spacing: 4px;
+}
+.timer-number {
+  font-family: var(--font-display);
+  font-size: clamp(100px, 20vw, 180px);
+  font-weight: 700;
+  color: #e84393;
+  line-height: 1;
+  text-shadow: 0 0 60px rgba(232, 67, 147, 0.2);
+  animation: timer-pulse 2s ease-in-out infinite;
+}
+@keyframes timer-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+.timer-unit {
+  font-family: var(--font-body);
+  font-size: clamp(24px, 4vw, 36px);
+  color: #8a5a7a;
+  margin-top: 8px;
+  letter-spacing: 8px;
+}
+.timer-details {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.timer-detail-item {
+  text-align: center;
+  font-family: var(--font-nunito);
+}
+.timer-detail-item .num {
+  font-size: clamp(24px, 4vw, 40px);
+  font-weight: 600;
+  color: #4a2040;
+  background: rgba(255,255,255,0.4);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 12px 20px;
+  min-width: 100px;
+  display: block;
+  border: 1px solid rgba(232, 67, 147, 0.15);
+}
+.timer-detail-item .label {
+  font-size: 13px;
+  color: #8a5a7a;
+  margin-top: 6px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.date-badge {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #8a5a7a;
+  background: rgba(255,255,255,0.3);
+  backdrop-filter: blur(10px);
+  padding: 8px 24px;
+  border-radius: 30px;
+  display: inline-block;
+  border: 1px solid rgba(232, 67, 147, 0.1);
+}
+
+/* ====== Section 3: First Meeting ====== */
+#section-meeting {
+  background: linear-gradient(135deg, #f0d4e8 0%, #fce4ec 50%, #f0d4e8 100%);
+  background-size: 400% 400%;
+  animation: gradient-flow 14s ease infinite;
+}
+.meeting-content {
+  max-width: 600px;
+  text-align: center;
+  z-index: 10;
+  position: relative;
+}
+.meeting-content .section-icon {
+  font-size: 42px;
+  color: #e84393;
+  margin-bottom: 16px;
+  filter: drop-shadow(0 0 20px rgba(232, 67, 147, 0.3));
+}
+.meeting-content h2 {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 6vw, 48px);
+  color: #4a2040;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.meeting-content .subtitle {
+  font-family: var(--font-display);
+  font-size: clamp(14px, 2.5vw, 18px);
+  color: #8a5a7a;
+  font-style: italic;
+  margin-bottom: 30px;
+  letter-spacing: 3px;
+}
+.meeting-content .story-text {
+  font-size: clamp(14px, 2vw, 16px);
+  line-height: 2;
+  color: #5a2a48;
+  letter-spacing: 1.5px;
+}
+.meeting-content .story-text p {
+  margin-bottom: 8px;
+}
+.silhouette-container {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  margin: 30px auto;
+}
+.silhouette-container svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ====== Section 4: Timeline ====== */
+#section-timeline {
+  background: linear-gradient(180deg, #fce4ec 0%, #f8d4e8 50%, #fce4ec 100%);
+  padding-bottom: 100px;
+}
+.timeline-title {
+  text-align: center;
+  margin-bottom: 60px;
+  z-index: 10;
+  position: relative;
+}
+.timeline-title .section-icon {
+  font-size: 42px;
+  color: #e84393;
+  margin-bottom: 12px;
+  filter: drop-shadow(0 0 20px rgba(232, 67, 147, 0.3));
+}
+.timeline-title h2 {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 6vw, 48px);
+  color: #4a2040;
+  font-weight: 700;
+}
+.timeline-title p {
+  font-family: var(--font-display);
+  font-size: 16px;
+  color: #8a5a7a;
+  font-style: italic;
+  letter-spacing: 2px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+  z-index: 10;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, #e84393, #f8a5c0, transparent);
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 50px;
+  position: relative;
+  width: 100%;
+}
+.timeline-item:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+.timeline-item:nth-child(odd) .timeline-card {
+  margin-right: 0;
+  margin-left: 30px;
+}
+.timeline-item:nth-child(even) .timeline-card {
+  margin-right: 30px;
+  margin-left: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #f8a5c0, #e84393);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #fff;
+  z-index: 10;
+  box-shadow: 0 0 20px rgba(232, 67, 147, 0.3);
+  flex-shrink: 0;
+}
+
+.timeline-card {
+  width: calc(50% - 30px);
+  background: rgba(255,255,255,0.5);
+  backdrop-filter: blur(20px);
+  border-radius: 16px;
+  padding: 24px 28px;
+  border: 1px solid rgba(232, 67, 147, 0.1);
+  box-shadow: 0 8px 32px rgba(232, 67, 147, 0.05);
+  transition: all 0.4s ease;
+}
+.timeline-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(232, 67, 147, 0.12);
+  border-color: rgba(232, 67, 147, 0.25);
+}
+.timeline-card .card-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  color: #4a2040;
+  margin-bottom: 8px;
+}
+.timeline-card .card-text {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #6a3050;
+  letter-spacing: 1px;
+}
+
+/* ====== Section 5: Photo Gallery ====== */
+#section-gallery {
+  background: linear-gradient(135deg, #f8d4e8 0%, #fce4ec 50%, #f8d4e8 100%);
+  background-size: 400% 400%;
+  animation: gradient-flow 16s ease infinite;
+}
+.gallery-title {
+  text-align: center;
+  margin-bottom: 40px;
+  z-index: 10;
+  position: relative;
+}
+.gallery-title .section-icon {
+  font-size: 42px;
+  color: #e84393;
+  margin-bottom: 12px;
+  filter: drop-shadow(0 0 20px rgba(232, 67, 147, 0.3));
+}
+.gallery-title h2 {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 6vw, 48px);
+  color: #4a2040;
+  font-weight: 700;
+}
+.gallery-title p {
+  font-family: var(--font-display);
+  font-size: 16px;
+  color: #8a5a7a;
+  font-style: italic;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  max-width: 700px;
+  width: 100%;
+  padding: 0 16px;
+  z-index: 10;
+  position: relative;
+}
+.gallery-item {
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  background: rgba(255,255,255,0.3);
+  aspect-ratio: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gallery-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 30px rgba(232, 67, 147, 0.15);
+}
+.gallery-item:nth-child(2) { grid-row: span 2; aspect-ratio: auto; }
+.gallery-item:nth-child(5) { grid-column: span 2; aspect-ratio: auto; }
+
+.gallery-item .placeholder-img {
+  width: 100%;
+  height: 100%;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  color: #f8a5c0;
+  background: linear-gradient(135deg, #fce4ec, #f8d4e8);
+}
+.gallery-item .img-caption {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 12px 14px;
+  background: linear-gradient(transparent, rgba(74, 32, 64, 0.6));
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 1px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-family: var(--font-nunito);
+}
+.gallery-item:hover .img-caption {
+  opacity: 1;
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed; inset: 0; z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(30, 10, 20, 0.85);
+  backdrop-filter: blur(15px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+.lightbox.active {
+  opacity: 1;
+  visibility: visible;
+}
+.lightbox-content {
+  max-width: 80vw;
+  max-height: 80vh;
+  text-align: center;
+  transform: scale(0.9);
+  transition: transform 0.4s ease;
+}
+.lightbox.active .lightbox-content {
+  transform: scale(1);
+}
+.lightbox-content .lb-icon {
+  font-size: 100px;
+  color: #f8a5c0;
+  margin-bottom: 16px;
+}
+.lightbox-content .lb-text {
+  font-family: var(--font-display);
+  font-size: 18px;
+  color: #fce4ec;
+  letter-spacing: 2px;
+}
+.lightbox-content .lb-close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 30px;
+  color: #fce4ec;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+.lightbox-content .lb-close:hover { opacity: 1; }
+
+/* ====== Section 6: Love Letter ====== */
+#section-letter {
+  background: linear-gradient(135deg, #fce4ec 0%, #f5e0e8 50%, #fce4ec 100%);
+}
+.letter-container {
+  max-width: 640px;
+  width: 100%;
+  padding: 0 20px;
+  z-index: 10;
+  position: relative;
+}
+.letter-paper {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 50px 40px;
+  border: 1px solid rgba(232, 67, 147, 0.1);
+  box-shadow: 0 20px 60px rgba(232, 67, 147, 0.05);
+  position: relative;
+}
+.letter-paper::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 20px; right: 20px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #f8a5c0, transparent);
+}
+.letter-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.letter-header .section-icon {
+  font-size: 36px;
+  color: #e84393;
+  filter: drop-shadow(0 0 15px rgba(232, 67, 147, 0.3));
+}
+.letter-header h2 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 5vw, 38px);
+  color: #4a2040;
+  font-weight: 700;
+  margin-top: 8px;
+}
+.letter-body {
+  font-size: clamp(14px, 2vw, 15px);
+  line-height: 2.1;
+  color: #4a2040;
+  letter-spacing: 1.2px;
+  text-align: justify;
+}
+.letter-body p {
+  margin-bottom: 18px;
+  text-indent: 2em;
+}
+.letter-signature {
+  text-align: right;
+  margin-top: 30px;
+  font-family: var(--font-hand);
+  font-size: 28px;
+  color: #e84393;
+  letter-spacing: 2px;
+}
+.letter-signature .sub {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: #8a5a7a;
+  letter-spacing: 3px;
+  margin-top: 4px;
+}
+
+/* ====== Section 7: Ending ====== */
+#section-ending {
+  background: linear-gradient(135deg, #1a0a14 0%, #2a1020 30%, #1a0a14 60%, #2a1020 100%);
+  color: #fce4ec;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+#section-ending .stars-bg {
+  position: absolute; inset: 0;
+  overflow: hidden;
+}
+#section-ending .star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #fff;
+  border-radius: 50%;
+  animation: twinkle var(--duration) ease-in-out infinite;
+}
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}
+
+.ending-content {
+  text-align: center;
+  z-index: 10;
+  position: relative;
+  padding: 40px 20px;
+}
+.ending-content .ending-heart {
+  font-size: 60px;
+  color: #f8a5c0;
+  display: block;
+  margin-bottom: 16px;
+  animation: float-heart 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 40px rgba(248, 165, 192, 0.3));
+}
+.ending-content h1 {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 7vw, 64px);
+  font-weight: 700;
+  color: #fce4ec;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+.ending-content .divider {
+  display: block;
+  font-family: var(--font-hand);
+  font-size: clamp(30px, 5vw, 48px);
+  color: #f8a5c0;
+  margin: 8px 0;
+}
+.ending-content .sub-name {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 5vw, 48px);
+  color: #fce4ec;
+  font-weight: 400;
+}
+.ending-content .forever {
+  font-family: var(--font-hand);
+  font-size: clamp(24px, 4vw, 36px);
+  color: #f8a5c0;
+  margin: 10px 0 30px;
+  letter-spacing: 6px;
+}
+.ending-content .ending-text {
+  font-size: clamp(14px, 2.5vw, 18px);
+  color: #d4a0b8;
+  line-height: 2;
+  letter-spacing: 2px;
+}
+.ending-content .ending-text .highlight {
+  color: #f8a5c0;
+  font-family: var(--font-display);
+  font-style: italic;
+}
+.ending-content .ending-final {
+  margin-top: 40px;
+  font-size: clamp(18px, 3vw, 24px);
+  color: #fce4ec;
+  line-height: 2;
+  letter-spacing: 3px;
+}
+.ending-content .ending-final .big-heart {
+  font-size: 50px;
+  color: #f8a5c0;
+  display: block;
+  margin-bottom: 12px;
+  animation: float-heart 2.5s ease-in-out infinite;
+}
+
+/* ====== Music Player ====== */
+#music-player {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 100;
+}
+.music-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 2px solid rgba(232, 67, 147, 0.2);
+  background: rgba(255,255,255,0.35);
+  backdrop-filter: blur(15px);
+  color: #e84393;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 20px rgba(232, 67, 147, 0.1);
+}
+.music-btn:hover {
+  background: rgba(255,255,255,0.5);
+  box-shadow: 0 4px 30px rgba(232, 67, 147, 0.2);
+  transform: scale(1.05);
+}
+.music-btn.playing {
+  animation: spin-record 4s linear infinite;
+}
+@keyframes spin-record {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Music overlay prompt */
+#music-prompt {
+  position: fixed; inset: 0; z-index: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(30, 10, 20, 0.6);
+  backdrop-filter: blur(10px);
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+#music-prompt.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.music-prompt-card {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(25px);
+  border-radius: 24px;
+  padding: 40px 36px;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.1);
+  max-width: 320px;
+  transform: translateY(0);
+  transition: transform 0.5s ease;
+}
+#music-prompt.hidden .music-prompt-card {
+  transform: translateY(20px);
+}
+.music-prompt-card .icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+.music-prompt-card p {
+  font-family: var(--font-display);
+  color: #fce4ec;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+}
+.music-prompt-card .prompt-btn {
+  padding: 14px 40px;
+  border: 1px solid rgba(248, 165, 192, 0.4);
+  border-radius: 50px;
+  background: rgba(248, 165, 192, 0.15);
+  color: #fce4ec;
+  font-family: var(--font-body);
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 2px;
+}
+.music-prompt-card .prompt-btn:hover {
+  background: rgba(248, 165, 192, 0.25);
+  border-color: #f8a5c0;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 768px) {
+  .section { padding: 40px 16px; }
+  .timeline::before { left: 24px; }
+  .timeline-item, .timeline-item:nth-child(odd) {
+    flex-direction: row;
+    padding-left: 50px;
+  }
+  .timeline-dot {
+    left: 24px;
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+  .timeline-card, .timeline-item:nth-child(odd) .timeline-card,
+  .timeline-item:nth-child(even) .timeline-card {
+    width: 100%;
+    margin: 0;
+  }
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .gallery-item:nth-child(2) { grid-row: span 1; }
+  .gallery-item:nth-child(5) { grid-column: span 1; }
+  .letter-paper { padding: 30px 24px; }
+  .timer-details { gap: 16px; }
+  .timer-detail-item .num { min-width: 80px; padding: 10px 14px; font-size: clamp(18px, 3vw, 28px); }
+  #music-player { bottom: 20px; right: 20px; }
+  .music-btn { width: 48px; height: 48px; font-size: 20px; }
+  .lightbox-content .lb-icon { font-size: 60px; }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 6px; }
+  .gallery-item .placeholder-img { font-size: 28px; min-height: 100px; }
+  .timeline-card { padding: 18px 20px; }
+  .letter-paper { padding: 24px 18px; }
+}
+
+/* ====== AOS overrides for softness ====== */
+[data-aos] {
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+/* ====== Nav dots ====== */
+#nav-dots {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.nav-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(232, 67, 147, 0.4);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.nav-dot.active {
+  background: #e84393;
+  border-color: #e84393;
+  box-shadow: 0 0 10px rgba(232, 67, 147, 0.3);
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  #nav-dots { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     Loading Screen
+     ============================================================ -->
+<div id="loading">
+  <div class="heart-loader">❤️</div>
+  <div class="loader-text">Loading our story...</div>
+</div>
+
+<!-- ============================================================
+     Nav Dots
+     ============================================================ -->
+<nav id="nav-dots"></nav>
+
+<!-- ============================================================
+     Floating Particles Canvas
+     ============================================================ -->
+<canvas id="particles-canvas"></canvas>
+
+<!-- ============================================================
+     Music Prompt
+     ============================================================ -->
+<div id="music-prompt">
+  <div class="music-prompt-card">
+    <div class="icon">🎵</div>
+    <p>点击开启我们的专属BGM</p>
+    <button class="prompt-btn" onclick="startMusic()">开启音乐 ✨</button>
+  </div>
+</div>
+
+<!-- ============================================================
+     Music Player Button
+     ============================================================ -->
+<div id="music-player">
+  <button class="music-btn" id="musicToggleBtn" onclick="toggleMusic()" title="播放/暂停音乐">
+    <i class="fas fa-music"></i>
+  </button>
+</div>
+
+<!-- ============================================================
+     Section 1: Opening
+     ============================================================ -->
+<section class="section" id="section-opening">
+  <div class="opening-content">
+    <span class="opening-heart">💗</span>
+    <h1>张泽旭</h1>
+    <div class="meet-text">
+      遇见<span class="ampersand">♡</span>韩如玉
+    </div>
+    <div class="meet-text">
+      是我这辈子
+      <span>最幸运的事情。</span>
+    </div>
+    <button class="enter-btn" onclick="scrollToSection('section-timer')">
+      点击进入我们的故事
+      <span class="arrow">↓</span>
+    </button>
+  </div>
+</section>
+
+<!-- ============================================================
+     Section 2: Love Timer
+     ============================================================ -->
+<section class="section" id="section-timer">
+  <div class="timer-content">
+    <div class="section-icon">💗</div>
+    <h2>我们的恋爱时间</h2>
+    <div class="timer-number" id="daysDisplay">0</div>
+    <div class="timer-unit">天</div>
+    <div class="timer-details">
+      <div class="timer-detail-item">
+        <span class="num" id="hoursDisplay">0</span>
+        <span class="label">小时</span>
+      </div>
+      <div class="timer-detail-item">
+        <span class="num" id="minutesDisplay">0</span>
+        <span class="label">分钟</span>
+      </div>
+      <div class="timer-detail-item">
+        <span class="num" id="secondsDisplay">0</span>
+        <span class="label">秒</span>
+      </div>
+    </div>
+    <div class="date-badge" id="dateBadge">2023.11.12 — 2026.07.04</div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Section 3: First Meeting
+     ============================================================ -->
+<section class="section" id="section-meeting">
+  <div class="meeting-content" data-aos="fade-up" data-aos-duration="1200">
+    <div class="section-icon">✨</div>
+    <h2>初见</h2>
+    <p class="subtitle">故事开始的地方。</p>
+    <div class="story-text">
+      <p>2023年。</p>
+      <p>命运让我们相遇。</p>
+      <p>那个时候的我们，</p>
+      <p>或许都没有想到，</p>
+      <p>眼前这个人，</p>
+      <p>会陪伴自己走过这么久。</p>
+      <p>&nbsp;</p>
+      <p>从陌生，到熟悉，</p>
+      <p>从朋友，到恋人。</p>
+      <p>你一点一点，</p>
+      <p>走进了我的生活。</p>
+      <p>也走进了我的未来。</p>
+    </div>
+    <!-- Silhouette -->
+    <div class="silhouette-container">
+      <svg viewBox="0 0 200 100" fill="none">
+        <circle cx="70" cy="40" r="18" fill="#4a2040" opacity="0.3"/>
+        <path d="M52 72 Q70 58 88 72 Q88 85 70 85 Q52 85 52 72Z" fill="#4a2040" opacity="0.3"/>
+        <circle cx="130" cy="40" r="18" fill="#4a2040" opacity="0.3"/>
+        <path d="M112 72 Q130 58 148 72 Q148 85 130 85 Q112 85 112 72Z" fill="#4a2040" opacity="0.3"/>
+        <path d="M70 55 Q100 65 130 55" stroke="#e84393" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.4"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Section 4: Timeline
+     ============================================================ -->
+<section class="section" id="section-timeline">
+  <div class="timeline-title" data-aos="fade-up" data-aos-duration="1000">
+    <div class="section-icon">💕</div>
+    <h2>我们的时光</h2>
+    <p>每一个瞬间，都值得被记住。</p>
+  </div>
+  <div class="timeline" id="timelineContainer">
+    <!-- Rendered by JS -->
+  </div>
+</section>
+
+<!-- ============================================================
+     Section 5: Photo Gallery
+     ============================================================ -->
+<section class="section" id="section-gallery">
+  <div class="gallery-title" data-aos="fade-up" data-aos-duration="1000">
+    <div class="section-icon">📸</div>
+    <h2>回忆相册</h2>
+    <p>每一帧，都是我们的故事。</p>
+  </div>
+  <div class="gallery-grid" id="galleryGrid">
+    <!-- Rendered by JS -->
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <div class="lightbox-content">
+    <div class="lb-icon" id="lbIcon">❤️</div>
+    <div class="lb-text" id="lbText">这是我们最珍贵的回忆</div>
+  </div>
+</div>
+
+<!-- ============================================================
+     Section 6: Love Letter
+     ============================================================ -->
+<section class="section" id="section-letter">
+  <div class="letter-container" data-aos="fade-up" data-aos-duration="1200">
+    <div class="letter-paper">
+      <div class="letter-header">
+        <div class="section-icon">💌</div>
+        <h2>写给韩如玉的一封信</h2>
+      </div>
+      <div class="letter-body" id="letterBody">
+        <!-- Rendered by JS -->
+      </div>
+      <div class="letter-signature">
+        永远爱你的，
+        <span class="sub">张泽旭</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Section 7: Ending
+     ============================================================ -->
+<section class="section" id="section-ending">
+  <div class="stars-bg" id="starsBg"></div>
+  <div class="ending-content" data-aos="fade-up" data-aos-duration="1500">
+    <span class="ending-heart">💗</span>
+    <h1>张泽旭</h1>
+    <span class="divider">♡</span>
+    <div class="sub-name">韩如玉</div>
+    <div class="forever">Forever</div>
+    <div class="ending-text">
+      <p>谢谢你陪我走过 <span class="highlight" id="endingDays">965</span> 天。</p>
+      <p>未来还有好多好多天。</p>
+    </div>
+    <div class="ending-final">
+      <span class="big-heart">💗</span>
+      我爱你。<br>
+      韩如玉。<br>
+      永远。
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Scripts
+     ============================================================ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+
+<script>
+/* ======================================================================
+   操 作 指 南
+   1. 加照片：把照片放入 images 文件夹，然后在下面 galleryPhotos 里写上文件名即可
+   2. 换音乐：把 MP3 文件放到和本文件同目录，然后在 bgmUrl 里填上文件名
+   3. 改文案：直接修改下面的中文内容
+   ====================================================================== */
+/* ================================================================
+   配 置 区 — 修改这里的内容即可定制整个网页
+   ================================================================ */
+const CONFIG = {
+  // ---- 基本信息 ----
+  boyName: '张泽旭',
+  girlName: '韩如玉',
+  startDate: '2023-11-12',
+
+  // ---- 背景音乐 ----
+  // 把 MP3 文件放到 index.html 旁边，在这里写文件名即可
+  // 例如 bgmUrl: './love.mp3'
+  // 如果用在线链接也可以
+  bgmUrl: './bgm.mp3',  // 把《有我呢》MP3 文件放在旁边，命名为 bgm.mp3,
+  // Web Audio API 生成的音乐作为备用
+  useWebAudioFallback: true,
+
+  // ---- 时间轴事件 ----
+  timelineEvents: [
+    { icon: '💬', title: '第一次聊天', text: '"一句简单的你好，打开了我们的故事。"' },
+    { icon: '👀', title: '第一次见面', text: '"比照片更好看。"' },
+    { icon: '🤝', title: '第一次牵手', text: '"那一刻，心跳快到不像话。"' },
+    { icon: '🍽️', title: '第一次一起吃饭', text: '"饭菜什么味道已经忘了，只记得对面坐着的是你。"' },
+    { icon: '🛍️', title: '第一次逛街', text: '"走了很久，却一点也不觉得累。"' },
+    { icon: '🎬', title: '第一次看电影', text: '"电影演了什么，其实已经记不清了。但你的笑容，一直记得。"' },
+    { icon: '📷', title: '第一次一起拍照', text: '"镜头记录下来的，不仅是照片，更是青春。"' },
+    { icon: '🎁', title: '第一次送礼物', text: '"收到礼物的人开心，送礼物的人更开心。"' },
+    { icon: '🤗', title: '第一次拥抱', text: '"那一刻，世界忽然安静了。"' },
+    { icon: '🎂', title: '一起过生日', text: '"以后每一个生日，都希望有你。"' },
+    { icon: '🎆', title: '一起跨年', text: '"倒数结束的时候，希望未来每一年，身边都是你。"' },
+    { icon: '✈️', title: '一起旅行', text: '"最好的风景，从来不是目的地，而是与你同行。"' },
+    { icon: '😤', title: '吵架', text: '"爱情不是没有争吵。而是每一次争吵之后，我们都会更珍惜彼此。"' },
+    { icon: '🤝', title: '和好', text: '"谢谢你，一直没有放弃我。"' },
+    { icon: '💗', title: '今天', text: `965天。未来还有：999天、1314天、5200天、10000天……我都想陪你一起。` },
+  ],
+
+  // ---- 照片配置 ----
+  // 每项: { icon, caption }
+  // 上传真实照片后，将 icon 替换为 <img> 或修改JS渲染逻辑
+  galleryPhotos: [
+    // 你的 8 张照片已经放到 images 文件夹了
+    { file: 'photo1.jpg', caption: '我们的第一张合照' },
+    { file: 'photo2.jpg', caption: '你笑起来的样子真好看' },
+    { file: 'photo3.jpg', caption: '和你在一起的每一天' },
+    { file: 'photo4.jpg', caption: '这是我最喜欢的瞬间' },
+    { file: 'photo5.jpg', caption: '想和你去更多的地方' },
+    { file: 'photo6.jpg', caption: '你在我眼里是最美' },
+    { file: 'photo7.jpg', caption: '一起走过的日子' },
+    { file: 'photo8.jpg', caption: '未来的路，一起走' },
+  ],
+  // ---- 信件内容 ----  // ---- 信件内容 ----  // ---- 信件内容 ----
+  letterContent: [
+    '亲爱的如玉：',
+    '写下这封信的时候，我坐在窗边，阳光刚好洒在桌上。我忽然想起我们第一次牵手的那天，也是这样的好天气。时间过得真快，一转眼我们已经走过了965天。',
+    '这965天里，我常常觉得自己是全世界最幸运的人。谢谢你，愿意把最真实的自己交给我；谢谢你，在我最不会表达的时候，依然能读懂我的心意；谢谢你，即使我们吵架了，也从来没有真的转身离开。',
+    '是你让我明白，原来爱一个人不是轰轰烈烈的誓言，而是清晨的一个早安，深夜的一通电话，是一起吃的每一顿饭，一起走过的每一条路。',
+    '和你在一起的日子，连空气都是甜的。你笑起来的时候，眼睛像弯弯的月亮，我心里就像有无数朵花在开。你有的时候任性，有的时候像个小孩子，可正是这样的你，让我想要变得更好，想要成为能让你依靠的人。',
+    '未来的路还很长，我想和你一起去看遍这个世界的美好。春天看樱花，夏天去海边，秋天踩落叶，冬天抱着你窝在沙发上看电影。',
+    '我想和你一起旅行，一起去我们没去过的地方。我想和你一起做饭，哪怕大多数时候都是黑暗料理。我想和你一起养一只猫，看它在阳台上晒太阳。我想和你一起布置我们的家，让它充满我们的味道。',
+    '最重要的是，我想和你一起慢慢变老。',
+    '等我们头发都白了，我还要牵着你的手，像现在一样，把你的手放在我的掌心里。那时候我们一定有了很多很多的故事，可以坐着摇椅，看夕阳，慢慢讲。',
+    '如玉，谢谢你来到我的世界。',
+    '我爱你。一直都是。永远都是。',
+  ],
+
+  // ---- Ending文案 ----
+  endingText: {
+    line1: '谢谢你陪我走过',
+    line2: '未来还有好多好多天。',
+    final: '我爱你。韩如玉。永远。',
+  },
+
+  // ---- 纪念日名称定制 ----
+  anniversaryName: '我们的恋爱纪念日',
+};
+
+/* ================================================================
+   核心逻辑
+   ================================================================ */
+
+// ------ 恋爱时间计算 ------
+const startMoment = new Date(CONFIG.startDate + 'T00:00:00');
+
+function calcLoveDuration() {
+  const now = new Date();
+  const diffMs = now - startMoment;
+  if (diffMs <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+  const totalSeconds = Math.floor(diffMs / 1000);
+  const days = Math.floor(totalSeconds / 86400);
+  const hours = Math.floor((totalSeconds % 86400) / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
+  return { days, hours, minutes, seconds };
+}
+
+function updateTimer() {
+  const d = calcLoveDuration();
+  document.getElementById('daysDisplay').textContent = d.days;
+  document.getElementById('hoursDisplay').textContent = String(d.hours).padStart(2, '0');
+  document.getElementById('minutesDisplay').textContent = String(d.minutes).padStart(2, '0');
+  document.getElementById('secondsDisplay').textContent = String(d.seconds).padStart(2, '0');
+  document.getElementById('endingDays').textContent = d.days;
+}
+
+function updateDateBadge() {
+  const now = new Date();
+  const fmt = (d) => {
+    const y = d.getFullYear();
+    const m = String(d.getMonth() + 1).padStart(2, '0');
+    const day = String(d.getDate()).padStart(2, '0');
+    return `${y}.${m}.${day}`;
+  };
+  document.getElementById('dateBadge').textContent = `${fmt(startMoment)} — ${fmt(now)}`;
+}
+
+// ------ 渲染时间轴 ------
+function renderTimeline() {
+  const container = document.getElementById('timelineContainer');
+  container.innerHTML = '';
+  CONFIG.timelineEvents.forEach((evt, i) => {
+    const item = document.createElement('div');
+    item.className = 'timeline-item';
+    item.setAttribute('data-aos', i % 2 === 0 ? 'fade-right' : 'fade-left');
+    item.setAttribute('data-aos-duration', '1000');
+    item.setAttribute('data-aos-delay', String(i * 50));
+    item.innerHTML = `
+      <div class="timeline-dot">${evt.icon}</div>
+      <div class="timeline-card">
+        <div class="card-title">${evt.title}</div>
+        <div class="card-text">${evt.text}</div>
+      </div>
+    `;
+    container.appendChild(item);
+  });
+}
+
+// ------ 渲染相册 ------
+function renderGallery() {
+  const grid = document.getElementById('galleryGrid');
+  grid.innerHTML = '';
+  CONFIG.galleryPhotos.forEach((photo, i) => {
+    const item = document.createElement('div');
+    item.className = 'gallery-item';
+    item.setAttribute('data-aos', 'zoom-in');
+    item.setAttribute('data-aos-duration', '800');
+    item.setAttribute('data-aos-delay', String(i * 50));
+    const hasFile = photo.file && photo.file !== '';
+    let imgHtml;
+    if (hasFile) {
+      imgHtml = '<img src="./images/' + photo.file + '" style="width:100%;height:100%;object-fit:cover" onerror="this.outerHTML=\'<div style=font-size:40px;text-align:center;padding-top:30%>\u2764\uFE0F</div>\'">';
+    } else {
+      imgHtml = '<div style="font-size:40px;text-align:center;padding-top:30%">' + (photo.icon || '\u2764\uFE0F') + '</div>';
+    }
+    item.innerHTML = '<div class="placeholder-img" style="padding:0;overflow:hidden">' + imgHtml + '</div><div class="img-caption">' + photo.caption + '</div>';
+    const lbContent = hasFile ? './images/' + photo.file : (photo.icon || '\u2764\uFE0F');
+    item.addEventListener('click', function() { openLightbox(lbContent, photo.caption, hasFile); });
+    grid.appendChild(item);
+  });
+}
+
+// ------ Lightbox ------
+function openLightbox(icon, text, isImage) {
+  const lb = document.getElementById('lightbox');
+  const lbIcon = document.getElementById('lbIcon');
+  const lbText = document.getElementById('lbText');
+  if (isImage) {
+    lbIcon.innerHTML = '<img src="' + icon + '" style="max-width:80vw;max-height:60vh;border-radius:12px;object-fit:contain">';
+  } else {
+    lbIcon.innerHTML = '<span style="font-size:100px">' + icon + '</span>';
+  }
+  lbText.textContent = text;
+  lb.classList.add('active');
+}
+
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('active');
+}
+
+// ------ 信件渲染 ------
+function renderLetter() {
+  const container = document.getElementById('letterBody');
+  container.innerHTML = '';
+  CONFIG.letterContent.forEach(p => {
+    const el = document.createElement('p');
+    el.textContent = p;
+    container.appendChild(el);
+  });
+}
+
+// ------ 星空背景 ------
+function createStars() {
+  const container = document.getElementById('starsBg');
+  for (let i = 0; i < 150; i++) {
+    const star = document.createElement('div');
+    star.className = 'star';
+    star.style.left = Math.random() * 100 + '%';
+    star.style.top = Math.random() * 100 + '%';
+    star.style.setProperty('--duration', (2 + Math.random() * 4) + 's');
+    star.style.width = (1.5 + Math.random() * 2) + 'px';
+    star.style.height = star.style.width;
+    star.style.animationDelay = Math.random() * 4 + 's';
+    container.appendChild(star);
+  }
+}
+
+// ------ Nav dots ------
+function setupNavDots() {
+  const sections = document.querySelectorAll('.section');
+  const nav = document.getElementById('nav-dots');
+  const sectionIds = ['section-opening', 'section-timer', 'section-meeting',
+    'section-timeline', 'section-gallery', 'section-letter', 'section-ending'];
+
+  sectionIds.forEach((id, i) => {
+    const dot = document.createElement('div');
+    dot.className = 'nav-dot' + (i === 0 ? ' active' : '');
+    dot.addEventListener('click', () => scrollToSection(id));
+    nav.appendChild(dot);
+  });
+
+  // Update active dot on scroll
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        const dots = nav.querySelectorAll('.nav-dot');
+        let currentIdx = 0;
+        sections.forEach((sec, i) => {
+          const rect = sec.getBoundingClientRect();
+          if (rect.top <= window.innerHeight / 2) currentIdx = i;
+        });
+        dots.forEach((d, i) => {
+          d.classList.toggle('active', i === currentIdx);
+        });
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+}
+
+function scrollToSection(id) {
+  document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+}
+
+// ------ Floating Particles (Canvas) ------
+class ParticleSystem {
+  constructor(canvas) {
+    this.canvas = canvas;
+    this.ctx = canvas.getContext('2d');
+    this.particles = [];
+    this.mouseX = -1000;
+    this.mouseY = -1000;
+    this.particleTypes = [
+      { emoji: '🌸', size: 14, count: 8 },
+      { emoji: '💕', size: 12, count: 5 },
+      { emoji: '✨', size: 8, count: 10 },
+      { emoji: '💗', size: 10, count: 5 },
+    ];
+    this.init();
+  }
+
+  init() {
+    this.resize();
+    window.addEventListener('resize', () => this.resize());
+    this.canvas.addEventListener('mousemove', (e) => {
+      this.mouseX = e.clientX;
+      this.mouseY = e.clientY;
+    });
+    this.canvas.addEventListener('mouseleave', () => {
+      this.mouseX = -1000;
+      this.mouseY = -1000;
+    });
+    this.createParticles();
+    this.animate();
+  }
+
+  resize() {
+    this.canvas.width = window.innerWidth;
+    this.canvas.height = window.innerHeight;
+  }
+
+  createParticles() {
+    this.particles = [];
+    this.particleTypes.forEach(type => {
+      for (let i = 0; i < type.count; i++) {
+        this.particles.push({
+          x: Math.random() * this.canvas.width,
+          y: Math.random() * this.canvas.height,
+          emoji: type.emoji,
+          size: type.size * (0.6 + Math.random() * 0.6),
+          speedY: 0.2 + Math.random() * 0.4,
+          speedX: -0.1 + Math.random() * 0.2,
+          rot: Math.random() * Math.PI * 2,
+          rotSpeed: -0.01 + Math.random() * 0.02,
+          swing: Math.random() * 2,
+          swingSpeed: 0.01 + Math.random() * 0.02,
+          opacity: 0.4 + Math.random() * 0.4,
+        });
+      }
+    });
+  }
+
+  animate() {
+    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+
+    this.particles.forEach(p => {
+      // Movement
+      p.y += p.speedY;
+      p.x += p.speedX + Math.sin(Date.now() * p.swingSpeed + p.swing) * 0.3;
+      p.rot += p.rotSpeed;
+
+      // Mouse interaction
+      const dx = p.x - this.mouseX;
+      const dy = p.y - this.mouseY;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist < 120) {
+        const angle = Math.atan2(dy, dx);
+        const force = (120 - dist) / 120 * 3;
+        p.x += Math.cos(angle) * force;
+        p.y += Math.sin(angle) * force;
+      }
+
+      // Wrap around
+      if (p.y > this.canvas.height + 30) {
+        p.y = -30;
+        p.x = Math.random() * this.canvas.width;
+      }
+      if (p.x < -30) p.x = this.canvas.width + 30;
+      if (p.x > this.canvas.width + 30) p.x = -30;
+
+      // Draw
+      this.ctx.save();
+      this.ctx.translate(p.x, p.y);
+      this.ctx.rotate(p.rot);
+      this.ctx.globalAlpha = p.opacity;
+      this.ctx.font = `${p.size}px serif`;
+      this.ctx.textAlign = 'center';
+      this.ctx.textBaseline = 'middle';
+      this.ctx.fillText(p.emoji, 0, 0);
+      this.ctx.restore();
+    });
+
+    requestAnimationFrame(() => this.animate());
+  }
+}
+
+// ------ Mouse Heart Trail ------
+class HeartTrail {
+  constructor() {
+    this.hearts = [];
+    this.canvas = document.createElement('canvas');
+    this.canvas.style.cssText = 'position:fixed;inset:0;z-index:9998;pointer-events:none;';
+    document.body.appendChild(this.canvas);
+    this.ctx = this.canvas.getContext('2d');
+    this.resize();
+    window.addEventListener('resize', () => this.resize());
+
+    document.addEventListener('mousemove', (e) => {
+      if (Math.random() < 0.3) {
+        this.hearts.push({
+          x: e.clientX,
+          y: e.clientY,
+          size: 6 + Math.random() * 10,
+          life: 1,
+          decay: 0.015 + Math.random() * 0.015,
+          vy: -0.5 - Math.random() * 0.5,
+          vx: -0.3 + Math.random() * 0.6,
+          rot: Math.random() * 0.5,
+        });
+        if (this.hearts.length > 50) this.hearts.shift();
+      }
+    });
+
+    document.addEventListener('click', (e) => {
+      // Click explosion
+      for (let i = 0; i < 12; i++) {
+        const angle = (Math.PI * 2 / 12) * i;
+        const speed = 2 + Math.random() * 3;
+        this.hearts.push({
+          x: e.clientX,
+          y: e.clientY,
+          size: 8 + Math.random() * 14,
+          life: 1,
+          decay: 0.02 + Math.random() * 0.02,
+          vy: Math.sin(angle) * speed,
+          vx: Math.cos(angle) * speed,
+          rot: Math.random() * Math.PI * 2,
+        });
+      }
+    });
+
+    this.animate();
+  }
+
+  resize() {
+    this.canvas.width = window.innerWidth;
+    this.canvas.height = window.innerHeight;
+  }
+
+  animate() {
+    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    this.hearts = this.hearts.filter(h => h.life > 0);
+
+    this.hearts.forEach(h => {
+      h.x += h.vx;
+      h.y += h.vy;
+      h.vy += 0.02;
+      h.life -= h.decay;
+      h.rot += 0.02;
+
+      this.ctx.save();
+      this.ctx.translate(h.x, h.y);
+      this.ctx.rotate(h.rot);
+      this.ctx.globalAlpha = h.life * 0.7;
+      this.ctx.font = `${h.size}px serif`;
+      this.ctx.textAlign = 'center';
+      this.ctx.textBaseline = 'middle';
+      this.ctx.fillText('💗', 0, 0);
+      this.ctx.restore();
+    });
+
+    requestAnimationFrame(() => this.animate());
+  }
+}
+
+// ------ Audio System ------
+let audioCtx = null;
+let audioGain = null;
+let isPlaying = false;
+let audioSource = null;
+let webAudioNodes = [];
+let currentOscillators = [];
+
+// Simple piano-like melody using Web Audio API as BGM fallback
+function createWebAudioBGM(ctx) {
+  const masterGain = ctx.createGain();
+  masterGain.gain.value = 0.15;
+  masterGain.connect(ctx.destination);
+
+  const reverbGain = ctx.createGain();
+  reverbGain.gain.value = 0.3;
+  const delay = ctx.createDelay(1);
+  delay.delayTime.value = 0.3;
+  masterGain.connect(reverbGain);
+  reverbGain.connect(delay);
+  delay.connect(reverbGain);
+  reverbGain.connect(ctx.destination);
+
+  // Simple melody notes (frequency, duration)
+  const melody = [
+    // C major chord arpeggios & simple melody
+    { freq: 523.25, dur: 0.6 }, // C5
+    { freq: 659.25, dur: 0.6 }, // E5
+    { freq: 783.99, dur: 0.6 }, // G5
+    { freq: 659.25, dur: 0.4 }, // E5
+    { freq: 783.99, dur: 0.6 }, // G5
+    { freq: 1046.5, dur: 1.0 }, // C6
+    { freq: 783.99, dur: 0.5 }, // G5
+    { freq: 659.25, dur: 0.3 }, // E5
+    { freq: 523.25, dur: 0.6 }, // C5
+    { freq: 587.33, dur: 0.6 }, // D5
+    { freq: 659.25, dur: 0.6 }, // E5
+    { freq: 587.33, dur: 0.4 }, // D5
+    { freq: 523.25, dur: 0.6 }, // C5
+    { freq: 440.00, dur: 0.6 }, // A4
+    { freq: 523.25, dur: 1.0 }, // C5
+    // A minor
+    { freq: 440.00, dur: 0.6 }, // A4
+    { freq: 523.25, dur: 0.6 }, // C5
+    { freq: 659.25, dur: 0.6 }, // E5
+    { freq: 523.25, dur: 0.4 }, // C5
+    { freq: 659.25, dur: 0.6 }, // E5
+    { freq: 783.99, dur: 1.0 }, // G5
+    { freq: 659.25, dur: 0.5 }, // E5
+    { freq: 523.25, dur: 0.3 }, // C5
+    { freq: 440.00, dur: 0.6 }, // A4
+    { freq: 493.88, dur: 0.6 }, // B4
+    { freq: 523.25, dur: 0.6 }, // C5
+    { freq: 493.88, dur: 0.4 }, // B4
+    { freq: 440.00, dur: 0.6 }, // A4
+    { freq: 392.00, dur: 0.6 }, // G4
+    { freq: 440.00, dur: 1.0 }, // A4
+    // F major
+    { freq: 349.23, dur: 0.6 }, // F4
+    { freq: 440.00, dur: 0.6 }, // A4
+    { freq: 523.25, dur: 0.6 }, // C5
+    { freq: 440.00, dur: 0.4 }, // A4
+    { freq: 523.25, dur: 0.6 }, // C5
+    { freq: 659.25, dur: 1.0 }, // E5
+    { freq: 523.25, dur: 0.5 }, // C5
+    { freq: 440.00, dur: 0.3 }, // A4
+    { freq: 349.23, dur: 0.6 }, // F4
+    { freq: 392.00, dur: 0.6 }, // G4
+    { freq: 440.00, dur: 0.6 }, // A4
+    { freq: 392.00, dur: 0.4 }, // G4
+    { freq: 349.23, dur: 0.6 }, // F4
+    { freq: 293.66, dur: 0.6 }, // D4
+    { freq: 349.23, dur: 1.0 }, // F4
+    // G major
+    { freq: 392.00, dur: 0.6 }, // G4
+    { freq: 493.88, dur: 0.6 }, // B4
+    { freq: 587.33, dur: 0.6 }, // D5
+    { freq: 493.88, dur: 0.4 }, // B4
+    { freq: 587.33, dur: 0.6 }, // D5
+    { freq: 783.99, dur: 1.0 }, // G5
+    { freq: 587.33, dur: 0.5 }, // D5
+    { freq: 493.88, dur: 0.3 }, // B4
+    { freq: 392.00, dur: 0.6 }, // G4
+    { freq: 440.00, dur: 0.6 }, // A4
+    { freq: 493.88, dur: 0.6 }, // B4
+    { freq: 440.00, dur: 0.4 }, // A4
+    { freq: 392.00, dur: 0.6 }, // G4
+    { freq: 349.23, dur: 0.6 }, // F4
+    { freq: 392.00, dur: 1.0 }, // G4
+    // Back to C
+    { freq: 523.25, dur: 0.8 }, // C5
+    { freq: 659.25, dur: 0.4 }, // E5
+    { freq: 783.99, dur: 0.6 }, // G5
+    { freq: 659.25, dur: 0.4 }, // E5
+    { freq: 783.99, dur: 0.8 }, // G5
+    { freq: 1046.5, dur: 1.2 }, // C6
+    { freq: 783.99, dur: 0.5 }, // G5
+    { freq: 659.25, dur: 0.4 }, // E5
+    { freq: 523.25, dur: 0.8 }, // C5
+    { freq: 587.33, dur: 0.4 }, // D5
+    { freq: 659.25, dur: 0.6 }, // E5
+    { freq: 587.33, dur: 0.4 }, // D5
+    { freq: 523.25, dur: 0.8 }, // C5
+    { freq: 440.00, dur: 0.4 }, // A4
+    { freq: 523.25, dur: 1.6 }, // C5
+  ];
+
+  let scheduleTime = 0;
+
+  function scheduleNotes() {
+    const now = ctx.currentTime;
+    if (scheduleTime < now) scheduleTime = now;
+
+    melody.forEach((note) => {
+      const startTime = scheduleTime;
+      const endTime = startTime + note.dur;
+
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+
+      osc.type = 'sine';
+      osc.frequency.value = note.freq;
+
+      // Piano-like envelope
+      gain.gain.setValueAtTime(0, startTime);
+      gain.gain.linearRampToValueAtTime(0.8, startTime + 0.02);
+      gain.gain.exponentialRampToValueAtTime(0.4, startTime + 0.1);
+      gain.gain.exponentialRampToValueAtTime(0.001, endTime - 0.05);
+
+      osc.connect(gain);
+      gain.connect(masterGain);
+
+      osc.start(startTime);
+      osc.stop(endTime + 0.05);
+
+      currentOscillators.push({ osc, gain, endTime: endTime + 0.1 });
+      webAudioNodes.push(osc, gain);
+
+      // Add a gentle overtone for warmth
+      const osc2 = ctx.createOscillator();
+      const gain2 = ctx.createGain();
+      osc2.type = 'sine';
+      osc2.frequency.value = note.freq * 2;
+      gain2.gain.setValueAtTime(0, startTime);
+      gain2.gain.linearRampToValueAtTime(0.15, startTime + 0.02);
+      gain2.gain.exponentialRampToValueAtTime(0.08, startTime + 0.1);
+      gain2.gain.exponentialRampToValueAtTime(0.001, endTime - 0.03);
+      osc2.connect(gain2);
+      gain2.connect(masterGain);
+      osc2.start(startTime);
+      osc2.stop(endTime + 0.05);
+      webAudioNodes.push(osc2, gain2);
+
+      scheduleTime = endTime;
+    });
+
+    // Schedule next loop before it ends
+    const loopDuration = scheduleTime - now;
+    setTimeout(() => {
+      if (isPlaying) {
+        scheduleNotes();
+      }
+    }, Math.max(0, loopDuration * 1000 - 2000));
+  }
+
+  scheduleNotes();
+  return masterGain;
+}
+
+function initAudio() {
+  if (audioCtx) return;
+  try {
+    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    audioGain = audioCtx.createGain();
+    audioGain.gain.value = 0.3;
+    audioGain.connect(audioCtx.destination);
+  } catch (e) {
+    console.warn('AudioContext not supported');
+  }
+}
+
+function startMusic() {
+  document.getElementById('music-prompt').classList.add('hidden');
+  initAudio();
+  if (!audioCtx) return;
+
+  if (audioCtx.state === 'suspended') {
+    audioCtx.resume();
+  }
+
+  isPlaying = true;
+  document.getElementById('musicToggleBtn').classList.add('playing');
+
+  // Try loading MP3 first
+  if (CONFIG.bgmUrl) {
+    const audio = new Audio(CONFIG.bgmUrl);
+    audio.loop = true;
+    audio.volume = 0.3;
+    audioSource = audio;
+    audio.play().then(() => {
+      // MP3 loaded and playing
+    }).catch(() => {
+      // MP3 failed, use Web Audio fallback
+      if (CONFIG.useWebAudioFallback) {
+        startWebAudioBGM();
+      }
+    });
+  } else if (CONFIG.useWebAudioFallback) {
+    startWebAudioBGM();
+  }
+}
+
+function startWebAudioBGM() {
+  if (!audioCtx) return;
+  createWebAudioBGM(audioCtx);
+  // Update button icon
+  const btn = document.getElementById('musicToggleBtn');
+  btn.innerHTML = '<i class="fas fa-pause"></i>';
+}
+
+function toggleMusic() {
+  if (!isPlaying) {
+    if (!audioSource && !webAudioNodes.length) {
+      startMusic();
+      return;
+    }
+    // Resume
+    if (audioSource) {
+      audioSource.play();
+    }
+    if (audioCtx && audioCtx.state === 'suspended') {
+      audioCtx.resume();
+    }
+    isPlaying = true;
+    document.getElementById('musicToggleBtn').classList.add('playing');
+    document.getElementById('musicToggleBtn').innerHTML = '<i class="fas fa-pause"></i>';
+  } else {
+    // Pause
+    if (audioSource) {
+      audioSource.pause();
+    }
+    if (audioCtx && audioCtx.state === 'running') {
+      audioCtx.suspend();
+    }
+    isPlaying = false;
+    document.getElementById('musicToggleBtn').classList.remove('playing');
+    document.getElementById('musicToggleBtn').innerHTML = '<i class="fas fa-music"></i>';
+  }
+}
+
+// ------ Section Observer for animations ------
+function setupSectionAnimations() {
+  const sections = document.querySelectorAll('.section');
+  sections.forEach(section => {
+    // GSAP entrance for opening section
+    if (section.id === 'section-opening') {
+      const content = section.querySelector('.opening-content');
+      gsap.from(content.children, {
+        y: 50,
+        opacity: 0,
+        duration: 1.2,
+        stagger: 0.2,
+        ease: 'power2.out',
+      });
+    }
+  });
+
+  // Timer counter animation
+  gsap.from('.timer-number', {
+    scale: 0.5,
+    opacity: 0,
+    duration: 1.5,
+    ease: 'elastic.out(1, 0.5)',
+    scrollTrigger: {
+      trigger: '#section-timer',
+      start: 'top 80%',
+    },
+  });
+
+  // Letter paper entrance
+  gsap.from('.letter-paper', {
+    y: 60,
+    opacity: 0,
+    duration: 1.2,
+    ease: 'power2.out',
+    scrollTrigger: {
+      trigger: '#section-letter',
+      start: 'top 75%',
+    },
+  });
+}
+
+// ------ Init ------
+document.addEventListener('DOMContentLoaded', () => {
+  // Hide loading after a moment
+  setTimeout(() => {
+    document.getElementById('loading').classList.add('hidden');
+  }, 1200);
+
+  // Render dynamic content
+  renderTimeline();
+  renderGallery();
+  renderLetter();
+  createStars();
+  setupNavDots();
+  updateTimer();
+  updateDateBadge();
+
+  // Start timer update every second
+  setInterval(updateTimer, 1000);
+
+  // Init AOS
+  AOS.init({
+    once: false,
+    mirror: true,
+    offset: 120,
+    duration: 1000,
+    easing: 'ease-out-cubic',
+  });
+
+  // Init particles
+  const canvas = document.getElementById('particles-canvas');
+  new ParticleSystem(canvas);
+
+  // Init heart trail
+  new HeartTrail();
+
+  // GSAP animations
+  setupSectionAnimations();
+
+  // Show music prompt after a short delay
+  setTimeout(() => {
+    // Check if audio can auto-play
+    const testAudio = new Audio();
+    testAudio.play().then(() => {
+      // Auto-play works
+      testAudio.pause();
+      document.getElementById('music-prompt').classList.add('hidden');
+      startMusic();
+    }).catch(() => {
+      // Auto-play blocked, show prompt
+      document.getElementById('music-prompt').classList.remove('hidden');
+    });
+  }, 2000);
+});
+</script>
+</body>
+</html>
